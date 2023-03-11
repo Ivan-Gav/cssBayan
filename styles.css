@@ -15,17 +15,13 @@ input {
     margin: 100px auto;
     padding: 10px;
     width: 600px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     color: #0059d9;
     
 }
 
 .bayan h2 {
     color: black;
-}
-
-.bayan li {
-    list-style: none;
 }
 
 .itemtitle {
@@ -53,6 +49,10 @@ span.fa-xmark {
     display: none;
 }
 
+input:checked + label {
+    color: black;
+}
+
 input:checked + label div.meme {
     max-height: 500px;
     overflow: hidden;
@@ -62,19 +62,22 @@ input:checked + label img{
     width: 400px;
 }
 
+.bayan:hover input:checked + label span.fa-xmark {
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+    font-size: 1.2rem;
+    color: red;
+}
+
 .bayan:hover {
     color: black;    
 }
 
 .bayan:hover span.fa-xmark {
     transform: rotate(45deg);
+    transition: transform 0.5s;
     font-size: 1.2rem; 
     display: inline;
-}
-
-input:checked + label span.fa-xmark {
-    transform: rotate(0deg);
-    font-size: 1.2rem;
 }
 
 .item:hover .meme {
@@ -88,7 +91,8 @@ input:checked + label span.fa-xmark {
 }
 
 .item:hover span.fa-xmark {
-    transform: rotate(0deg);
+    transform: rotate(360deg);
+    transition: transform 0.5s;
     font-size: 1.2rem; 
     display: inline;
 }
