@@ -16,7 +16,6 @@ body {
     body {font-size: 150%;} 
 }  
 
-
 input {
     display: none;
 }
@@ -31,7 +30,6 @@ input {
     max-width: 37rem;
     background-color: white;
     color: #0059d9;
-    
 }
 
 .bayan h2 {
@@ -43,31 +41,32 @@ input {
     display: flex;
     justify-content: space-between;
     border-top: thin solid #dae0e4;
-    
 }
 
 .meme {
     max-height: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
     transition: max-height 0.5s;
-    width: auto;
-    text-align: center;
 }
 
 .meme img {
     width: 0;
+    margin-bottom: 1rem;
     transition: width 0.5s; /* added fade out for pics, though it wasn't in the original task, but it really improves the beaviour of the menu.*/
 }
 
-span.fa-xmark {
+i.fa-face-smile {
     display: none;
+    color: black;
 }
 
 input:checked + label {
     color: black;
 }
 
-input:checked + label div.meme {
+input:checked + label .meme {
     max-height: 100vh;
     overflow: hidden;
 }
@@ -77,10 +76,9 @@ input:checked + label img{
     width: 25rem;
 }
 
-.bayan input:checked + label span.fa-xmark {
-    transform: rotate(0);
-    transition: transform 0.5s;
-    font-size: 1.2rem;
+.bayan input:checked + label .fa-face-smile {
+    /* transform: rotate(0); */
+    transition: color 0.5s;
     color: red;
 }
 
@@ -91,10 +89,10 @@ input:checked + label img{
     color: black;    
 }
 
-.bayan:hover span.fa-xmark {
-    transform: rotate(315deg);
-    transition: transform 0.5s;
-    font-size: 1.2rem; 
+.bayan:hover .fa-face-smile {
+    /* transform: rotate(315deg); */
+    color: black;
+    transition: color 0.5s;
     display: inline;
 }
 
@@ -109,10 +107,10 @@ input:checked + label img{
     transition: width 0.5s;
 }
 
-.item:hover span.fa-xmark {
-    transform: rotate(0);
-    transition: transform 0.5s;
-    font-size: 1.2rem; 
+.item:hover .fa-face-smile {
+    /* transform: rotate(0); */
+    color: orange;
+    transition: color 0.5s;
     display: inline;
 }
 
