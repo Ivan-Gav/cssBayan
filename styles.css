@@ -1,6 +1,14 @@
-* {
+body {
     font-family: 'Open Sans', sans-serif;
     background-color: black;
+}
+
+input {
+    display: none;
+}
+
+.bayan, .itemtitle, .meme {
+    cursor: pointer;
 }
 
 .bayan {
@@ -9,13 +17,11 @@
     width: 600px;
     background-color: rgb(255, 255, 255);
     color: #0059d9;
+    
 }
 
 .bayan h2 {
     color: black;
-}
-.bayan * {
-    background-color: rgb(255, 255, 255);
 }
 
 .bayan li {
@@ -23,27 +29,11 @@
 }
 
 .itemtitle {
-    padding: 10px;
+    padding: 0.5rem 0 0.5rem 0;
     display: flex;
-    text-align: center;
     justify-content: space-between;
-   
     border-top: thin solid #dae0e4;
-    cursor: pointer;    
-}
-
-/* .bayan label {
-    padding: 10px;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    color: #0059d9;
-    border-top: thin solid #dae0e4;
-    cursor: pointer;
-} */
-
-input {
-    display: none;
+    
 }
 
 .meme {
@@ -54,64 +44,56 @@ input {
     text-align: center;
 }
 
-input:checked + label div.meme {
-    max-height: 500px;
-    overflow: hidden;
-    transition: max-height 0.5s;
+.meme img {
+    width: 0;
+    transition: width 0.5s; /* added fade out for pics, though it wasn't made in the sample, but it really improves beaviour of the menu.*/
 }
 
 span.fa-xmark {
     display: none;
 }
 
+input:checked + label div.meme {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+input:checked + label img{
+    width: 400px;
+}
+
 .bayan:hover {
-    cursor: pointer;
     color: black;    
 }
 
 .bayan:hover span.fa-xmark {
     transform: rotate(45deg);
-    font-size: 22px; /* redo!!! */
+    font-size: 1.2rem; 
     display: inline;
-    cursor: pointer;
 }
 
-input:checked + label div {
-    color: black;
-    cursor: pointer;
-}
-
-
-
-.bayan:hover input:checked + label span.fa-xmark {
+input:checked + label span.fa-xmark {
     transform: rotate(0deg);
-    font-size: 22px; /* redo!!! */
-    cursor: pointer;
+    font-size: 1.2rem;
 }
 
 .item:hover .meme {
     max-height: 500px;
     overflow: hidden;
-    transition: max-height 0.5s;
 }
 
-.meme:hover {
-    max-height: 500px;
-    overflow: hidden;
-    transition: max-height 0.5s;
+.item:hover .meme img {
+    width: 400px;
+    transition: width 0.5s;
 }
 
 .item:hover span.fa-xmark {
     transform: rotate(0deg);
-    font-size: 22px; /* redo!!! */
+    font-size: 1.2rem; 
     display: inline;
-    cursor: pointer;
 }
 
 .item:active {
     opacity: 0.5;
-}
-
-.item:active label {
     color: #0059d9;
 }
