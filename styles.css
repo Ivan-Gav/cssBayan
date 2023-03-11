@@ -1,7 +1,21 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: black;
+    font-size: 100%;
 }
+
+@media only screen and (max-width: 320px) {
+    body {font-size: 150%;} 
+}
+
+@media only screen and (min-width: 321px) and (max-width:820px) {
+    body {font-size: 200%;} 
+}  
+
+@media only screen and (min-width: 821px) and (max-width:1920px) {
+    body {font-size: 150%;} 
+}  
+
 
 input {
     display: none;
@@ -12,9 +26,9 @@ input {
 }
 
 .bayan {
-    margin: 100px auto;
-    padding: 10px;
-    width: 600px;
+    margin: 6rem auto;
+    padding: 1rem;
+    max-width: 37rem;
     background-color: white;
     color: #0059d9;
     
@@ -42,7 +56,7 @@ input {
 
 .meme img {
     width: 0;
-    transition: width 0.5s; /* added fade out for pics, though it wasn't made in the sample, but it really improves beaviour of the menu.*/
+    transition: width 0.5s; /* added fade out for pics, though it wasn't in the original task, but it really improves the beaviour of the menu.*/
 }
 
 span.fa-xmark {
@@ -54,47 +68,55 @@ input:checked + label {
 }
 
 input:checked + label div.meme {
-    max-height: 500px;
+    max-height: 100vh;
     overflow: hidden;
 }
 
 input:checked + label img{
-    width: 400px;
+    max-width: 100%;
+    width: 25rem;
 }
 
-.bayan:hover input:checked + label span.fa-xmark {
-    transform: rotate(0deg);
+.bayan input:checked + label span.fa-xmark {
+    transform: rotate(0);
     transition: transform 0.5s;
     font-size: 1.2rem;
     color: red;
 }
+
+@media (hover: hover) {
+/* start section for hover-supporting devices */
 
 .bayan:hover {
     color: black;    
 }
 
 .bayan:hover span.fa-xmark {
-    transform: rotate(45deg);
+    transform: rotate(315deg);
     transition: transform 0.5s;
     font-size: 1.2rem; 
     display: inline;
 }
 
 .item:hover .meme {
-    max-height: 500px;
+    max-height: 32rem;
     overflow: hidden;
 }
 
 .item:hover .meme img {
-    width: 400px;
+    max-width: 100%;
+    width: 25rem;
     transition: width 0.5s;
 }
 
 .item:hover span.fa-xmark {
-    transform: rotate(360deg);
+    transform: rotate(0);
     transition: transform 0.5s;
     font-size: 1.2rem; 
     display: inline;
+}
+
+/* end section for hover-supporting devices */
 }
 
 .item:active {
