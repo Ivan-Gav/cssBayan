@@ -1,31 +1,39 @@
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: black;
+    font-weight: 800;
     font-size: 100%;
 }
 
 @media only screen and (max-width: 320px) {
-    body {font-size: 150%;} 
+    body {
+        font-size: 150%;
+    }
 }
 
 @media only screen and (min-width: 321px) and (max-width:820px) {
-    body {font-size: 200%;} 
-}  
+    body {
+        font-size: 200%;
+    }
+}
 
 @media only screen and (min-width: 821px) and (max-width:1920px) {
-    body {font-size: 150%;} 
-}  
+    body {
+        font-size: 150%;
+    }
+}
 
 input {
     display: none;
 }
 
-.bayan, .itemtitle, .meme {
+.bayan,
+.itemtitle,
+.meme {
     cursor: pointer;
 }
 
 .bayan {
-    margin: 6rem auto;
+    margin: 1rem auto;
     padding: 1rem;
     max-width: 37rem;
     background-color: white;
@@ -54,7 +62,8 @@ input {
 .meme img {
     width: 0;
     margin-bottom: 1rem;
-    transition: width 0.5s; /* added fade out for pics, though it wasn't in the original task, but it really improves the beaviour of the menu.*/
+    transition: width 0.5s;
+    /* added fade out for pics, though it wasn't in the original task, but it really improves the beaviour of the menu.*/
 }
 
 i.fa-face-smile {
@@ -62,62 +71,66 @@ i.fa-face-smile {
     color: black;
 }
 
-input:checked + label {
+input:checked+label {
     color: black;
 }
 
-input:checked + label .meme {
+input:checked+label .meme {
     max-height: 100vh;
     overflow: hidden;
 }
 
-input:checked + label img{
+input:checked+label img {
     max-width: 100%;
     width: 25rem;
 }
 
-.bayan input:checked + label .fa-face-smile {
-    /* transform: rotate(0); */
-    transition: color 0.5s;
+.bayan input:checked+label .fa-face-smile {
+    transition: color 0.5s ease-in;
     color: red;
 }
 
 @media (hover: hover) {
-/* start section for hover-supporting devices */
+    /* start section for hover-supporting devices */
 
-.bayan:hover {
-    color: black;    
-}
+    .bayan:hover {
+        color: black;
+    }
 
-.bayan:hover .fa-face-smile {
-    /* transform: rotate(315deg); */
-    color: black;
-    transition: color 0.5s;
-    display: inline;
-}
+    .bayan:hover .fa-face-smile {
+        color: lightgrey;
+        transition: color 0.5s ease in;
+        display: inline;
+    }
 
-.item:hover .meme {
-    max-height: 32rem;
-    overflow: hidden;
-}
+    .item:hover .meme {
+        max-height: 32rem;
+        overflow: hidden;
+    }
 
-.item:hover .meme img {
-    max-width: 100%;
-    width: 25rem;
-    transition: width 0.5s;
-}
+    .item:hover .meme img {
+        max-width: 100%;
+        width: 25rem;
+        transition: width 0.5s;
+    }
 
-.item:hover .fa-face-smile {
-    /* transform: rotate(0); */
-    color: orange;
-    transition: color 0.5s;
-    display: inline;
-}
+    .item:hover .fa-face-smile {
+        color: orange;
+        transition: color 0.5s ease-in;
+        display: inline;
+    }
 
-/* end section for hover-supporting devices */
+    /* end section for hover-supporting devices */
 }
 
 .item:active {
     opacity: 0.5;
     color: #0059d9;
+}
+
+footer {
+    width: 100%;
+    color: gray;
+    font-weight: 300;
+    text-align: center;
 }
